@@ -1,2 +1,2 @@
 // тут пишем код / минифицируется
-console.log("test");
+console.log('test');

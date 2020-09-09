@@ -1,4 +1,4 @@
-let project_folder = "dist";
+let project_folder = "_dist";
 let source_folder = "#src";
 let path = {
   build: {
@@ -42,7 +42,7 @@ let {
   clean_css = require("gulp-clean-css"),
   rename = require("gulp-rename"),
   uglify = require("gulp-uglify-es").default,
-  imagemin = require("gulp-imagemin"),
+  imagemin = require("gulp-imagemin");
 
 
 // Наши функции
@@ -131,12 +131,18 @@ function images() {
     .pipe(browsersync.stream())
 }
 
+function fonts() {
+  return src(path.src.fonts)
+    .pipe(dest(path.build.fonts))
+
+};
 
 function watchFiles() {
   gulp.watch([path.watch.html], html);
   gulp.watch([path.watch.css], css);
   gulp.watch([path.watch.js], js);
   gulp.watch([path.watch.img], images);
+
 }
 
 function clean() {
@@ -144,10 +150,10 @@ function clean() {
 }
 
 // добавить fonts
-let build = gulp.series(clean, gulp.parallel(js, css, html, images));
+let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
-//exports.fonts = fonts;
+exports.fonts = fonts;
 exports.images = images;
 exports.js = js;
 exports.css = css;
