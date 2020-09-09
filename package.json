@@ -1,0 +1,23 @@
+{
+  "name": "1038115-technomart-29",
+  "version": "1.0.0",
+  "description": "* Студент: [Иван](https://up.htmlacademy.ru/htmlcss/29/user/1038115). * Наставник: [Олеся Севостьянова](https://htmlacademy.ru/profile/id498579).",
+  "main": "index.js",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivaGree/1038115-technomart-29.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ivaGree/1038115-technomart-29/issues"
+  },
+  "homepage": "https://github.com/ivaGree/1038115-technomart-29#readme"
+}
